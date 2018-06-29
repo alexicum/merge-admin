@@ -1,0 +1,37 @@
+{
+  "name": "merge-admin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "neutrino build",
+    "start": "run-p fake:start nstart",
+    "nstart": "neutrino start",
+    "lint": "neutrino lint",
+    "test": "neutrino test",
+    "fake:start": "json-server products.json",
+    "fake:generate": "node ./src/FakeServer/index_db.js",
+    "cfg": "neutrino start --inspect > ./tmp/dev.cfg",
+    "cfg:prod": "neutrino build --inspect > ./tmp/prod.cfg"
+  },
+  "dependencies": {
+    "faker": "^4.1.0",
+    "fuse.js": "^3.2.1",
+    "prop-types": "^15.6.1",
+    "query-string": "^6.1.0",
+    "ra-data-json-server": "^2.0.3",
+    "react": "^16.4.1",
+    "react-admin": "^2.0.3",
+    "react-dom": "^16.4.1",
+    "react-hot-loader": "^4.3.3",
+    "recompose": "^0.27.1"
+  },
+  "devDependencies": {
+    "@neutrinojs/airbnb": "^8.2.3",
+    "@neutrinojs/jest": "^8.2.3",
+    "@neutrinojs/react": "^8.2.3",
+    "neutrino": "^8.2.3",
+    "neutrino-middleware-postcss-scss-modules": "../../common/neutrino-middleware-postcss-scss-modules",
+    "npm-run-all": "^4.1.3"
+  }
+}

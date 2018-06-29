@@ -1,0 +1,8 @@
+.Posts {
+  display: flex;
+  justify-content: space-between;
+
+  &Right {
+    margin-left: 10px;
+  }
+}

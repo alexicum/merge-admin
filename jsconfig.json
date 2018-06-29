@@ -1,0 +1,17 @@
+/**
+ * Файл указывает VSCode root dir of JS project (например влияет на Go to definition Ctrl+Click для неотносительных путей)
+ * https://code.visualstudio.com/docs/languages/jsconfig
+ */
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "commonjs",
+        "baseUrl": "./src"
+    },
+    "exclude": [
+        "node_modules",
+        "bin",
+        "build",
+        "tmp"
+    ]
+}
