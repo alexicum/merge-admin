@@ -3,9 +3,6 @@ const path = require('path');
 module.exports = {
   use: [
     (neutrino) => {
-      // add src folder to webpack.resolve.modules:
-      neutrino.config.resolve.modules.add(neutrino.options.source)
-
       /*
        * eslint preset custom settings
        */
@@ -58,6 +55,13 @@ module.exports = {
         }
       }
     ],
+    (neutrino) => {
+      // add src folder to webpack.resolve.modules to the end of a Set
+      // (tha)
+      // if we add it to the head, then src files with equal names
+      // would conflict with same from libs (for ex.: history)
+      neutrino.config.resolve.modules.add(neutrino.options.source);
+    },
     '@neutrinojs/jest',
     // 'neutrino-middleware-react-ext',
     'neutrino-middleware-postcss-scss-modules',

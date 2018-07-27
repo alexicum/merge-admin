@@ -83,7 +83,7 @@ export default ProductsList;
 //   // const resource = state.admin.resources[props.resource];
 //   // // every resource has a "data" object with all entities mapped by id
 //   // const allRecords = resource && resource.data;
-//   // // every resource has a "list" object that has an array of ids of the currently filtered entities
+// every resource has a "list" object that has an array of ids of the currently filtered entities
 //   // const filteredIDs = (resource && resource.list.ids) || [];
 
 //   const dbProductsResource = state.admin.resources[dbProducts];
